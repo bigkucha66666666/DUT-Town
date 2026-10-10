@@ -1,0 +1,39 @@
+{
+  "simulation": {
+    "map": "world/maps/sem_1f.json",
+    "personas": "agents/personas",
+    "start_clock": "07:40",
+    "speed": 8.0,
+    "seed": 42
+  },
+  "llm": {
+    "provider": "mock",
+    "temperature": 0.85,
+    "max_retries": 2,
+    "cache": true,
+    "mock": {
+      "seed": 0
+    },
+    "cloud": {
+      "base_url": "https://api.deepseek.com/v1",
+      "model": "deepseek-v4-flash",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "concurrency": 4,
+      "timeout": 60
+    },
+    "local": {
+      "base_url": "http://localhost:11434/v1",
+      "model": "qwen2.5:7b",
+      "api_key_env": "OLLAMA_API_KEY",
+      "concurrency": 1,
+      "timeout": 120
+    }
+  },
+  "budget": {
+    "max_llm_calls_per_game_day": 3000,
+    "reflect_importance_threshold": 26,
+    "dialogue_max_turns": 6,
+    "dialogue_cooldown_minutes": 25,
+    "dialogue_engage_radius_m": 2.6
+  }
+}

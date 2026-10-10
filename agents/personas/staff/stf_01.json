@@ -1,0 +1,16 @@
+{
+  "id": "stf_01",
+  "role": "staff",
+  "name": "赵秀兰",
+  "identity": "后勤 · 学院楼物业",
+  "traits": ["热心", "记性好", "谁都认识"],
+  "speech_style": "说话带东北口音，爱唠家常",
+  "goal": "把一层的卫生和饮水机都照看好",
+  "look": { "hair": "#4a3a2a", "shirt": "#d8a13a", "pants": "#5a4a3a", "skin": "#e0bd94" },
+  "start_spawn": "sp_lobby",
+  "speed": 0.95,
+  "routine": [
+    { "at": "07:45", "room": "rm_lobby", "why": "擦大厅的地" },
+    { "at": "08:05", "room": "rm_corridor_main", "why": "巡一遍走廊" }
+  ]
+}

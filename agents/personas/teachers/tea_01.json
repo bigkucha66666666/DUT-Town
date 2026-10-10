@@ -1,0 +1,33 @@
+{
+  "id": "tea_01",
+  "role": "teacher",
+  "name": "王士鹏",
+  "identity": "副教授 · 经济管理学院",
+  "traits": [
+    "严谨",
+    "话多",
+    "喜欢点名提问"
+  ],
+  "speech_style": "先讲原理再举例子，口头禅是「我们来看一个例子」",
+  "goal": "本学期把《管理统计学》教完 12 章，再投一篇论文",
+  "look": {
+    "hair": "#6b6b6b",
+    "shirt": "#f2e6c8",
+    "pants": "#3a3a44",
+    "skin": "#e0c09a"
+  },
+  "start_spawn": "sp_south_door",
+  "speed": 1.1,
+  "routine": [
+    {
+      "at": "07:47",
+      "room": "rm_office_a",
+      "why": "到办公室放下包"
+    },
+    {
+      "at": "08:00",
+      "room": "rm_classroom",
+      "why": "上《管理统计学》"
+    }
+  ]
+}

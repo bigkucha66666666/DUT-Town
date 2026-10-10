@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "id": "dut_sem",
+    "name": "大连理工大学 · 经济管理学院及周边",
+    "version": "0.1.0",
+    "units": "meter",
+    "tile_size": 1,
+    "world": {
+      "width": 300,
+      "height": 212
+    },
+    "origin": "左上角为西北角，x 向东，y 向南",
+    "default_floor": "1F",
+    "disclaimer": "本图为模拟仿真用示意图。建筑位置、规模与功能分区依据公开资料（见 sources），房间级布局为合理推定，非测绘成果，不可用于导航。",
+    "sources": [
+      "http://mba.dlut.edu.cn/info/1179/2260.htm",
+      "https://news.dlut.edu.cn/xjnry/yxfc_content.jsp?urltype=news.NewsContentUrl&wbtreeid=1011&wbnewsid=19790"
+    ],
+    "notes": [
+      "经济管理学院楼（原管理与经济学部大楼）：建筑面积 36000 m²，建筑高度 23.55 m，地下 1 层、地上 3-6 层（阶梯式），2014 年开工、2016 年竣工。",
+      "官方两篇报道对相邻道路方位表述不一致（一篇作“北侧与东侧”，一篇作“北侧与西侧”）。本图采用：大工路在北、老红凌路在西。",
+      "本图仅建模 1F 与室外场地，2F-6F 与 B1 已在 floors 中登记但标记为 pending。"
+    ]
+  },
+  "floors": [
+    {
+      "id": "B1",
+      "name": "地下一层",
+      "status": "pending",
+      "note": "地下车库（未建模）"
+    },
+    {
+      "id": "1F",
+      "name": "一层",
+      "status": "modeled",
+      "note": "大厅、多功能厅、专业学位培训教室、科研实验中心"
+    },
+    {
+      "id": "2F",
+      "name": "二层",
+      "status": "pending"
+    },
+    {
+      "id": "3F",
+      "name": "三层",
+      "status": "pending"
+    },
+    {
+      "id": "4F",
+      "name": "四层",
+      "status": "pending",
+      "note": "研究生用房 / 教师办公室（阶梯式体量，4F 起局部收进）"
+    },
+    {
+      "id": "5F",
+      "name": "五层",
+      "status": "pending"
+    },
+    {
+      "id": "6F",
+      "name": "六层",
+      "status": "pending",
+      "note": "行政办公（仅核心筒部分，顶层）"
+    }
+  ],
+  "ground": [
+    {
+      "id": "rd_dagong",
+      "name": "大工路",
+      "category": "road",
+      "level": "city",
+      "rect": {
+        "x": 0,
+        "y": 10,
+        "w": 300,
+        "h": 18
+      }
+    },
+    {
+      "id": "rd_laohongling",
+      "name": "老红凌路",
+      "category": "road",
+      "level": "city",
+      "rect": {
+        "x": 8,
+        "y": 0,
+        "w": 18,
+        "h": 212
+      }
+    },
+    {
+      "id": "rd_south",
+      "name": "学院南路",
+      "category": "road",
+      "level": "campus",
+      "rect": {
+        "x": 0,
+        "y": 186,
+        "w": 300,
+        "h": 14
+      }
+    },
+    {
+      "id": "rd_east",
+      "name": "学院东路",
+      "category": "road",
+      "level": "campus",
+      "rect": {
+        "x": 268,
+        "y": 28,
+        "w": 14,
+        "h": 158
+      }
+    },
+    {
+      "id": "pl_sem",
+      "name": "经管学院广场",
+      "category": "plaza",
+      "rect": {
+        "x": 104,
+        "y": 116,
+        "w": 100,
+        "h": 42
+      },
+      "note": "学院楼南门前的集散广场，适合作为活动、宣传、偶遇场景"
+    },
+    {
+      "id": "pl_north_walk",
+      "name": "北侧步道",
+      "category": "path",
+      "rect": {
+        "x": 104,
+        "y": 36,
+        "w": 100,
+        "h": 18
+      }
+    },
+    {
+      "id": "pk_sem",
+      "name": "学院停车场",
+      "category": "parking",
+      "rect": {
+        "x": 210,
+        "y": 56,
+        "w": 48,
+        "h": 44
+      },
+      "capacity": 60
+    },
+    {
+      "id": "sh_bike",
+      "name": "自行车棚",
+      "category": "shelter",
+      "rect": {
+        "x": 210,
+        "y": 110,
+        "w": 48,
+        "h": 20
+      },
+      "capacity": 200
+    },
+    {
+      "id": "gn_west",
+      "name": "西侧绿地",
+      "category": "green",
+      "rect": {
+        "x": 32,
+        "y": 130,
+        "w": 64,
+        "h": 28
+      }
+    },
+    {
+      "id": "gn_east",
+      "name": "东侧绿地",
+      "category": "green",
+      "rect": {
+        "x": 210,
+        "y": 136,
+        "w": 48,
+        "h": 22
+      }
+    },
+    {
+      "id": "gn_south",
+      "name": "南侧绿化带",
+      "category": "green",
+      "rect": {
+        "x": 0,
+        "y": 158,
+        "w": 300,
+        "h": 28
+      }
+    },
+    {
+      "id": "gn_north",
+      "name": "北侧绿化带",
+      "category": "green",
+      "rect": {
+        "x": 0,
+        "y": 28,
+        "w": 104,
+        "h": 22
+      }
+    }
+  ],
+  "buildings": [
+    {
+      "id": "b_sem",
+      "name": "经济管理学院楼",
+      "category": "academic",
+      "focus": true,
+      "rect": {
+        "x": 104,
+        "y": 56,
+        "w": 100,
+        "h": 60
+      },
+      "floors": [
+        "B1",
+        "1F",
+        "2F",
+        "3F",
+        "4F",
+        "5F",
+        "6F"
+      ],
+      "modeled_floors": [
+        "1F"
+      ],
+      "height_m": 23.55,
+      "area_m2": 36000,
+      "open_hours": "07:00-22:30",
+      "allowed_roles": [
+        "student",
+        "teacher",
+        "staff"
+      ],
+      "entrances": [
+        {
+          "id": "ent_sem_south",
+          "name": "学院楼南门",
+          "pos": [
+            159,
+            116
+          ],
+          "floor": "1F",
+          "facing": "south"
+        }
+      ],
+      "note": "原管理与经济学部大楼。功能：行政办公、专业学位培训教室、科研与实验用房、多功能厅、教师办公室、研究生用房"
+    },
+    {
+      "id": "b_jlxy",
+      "name": "中国大连高级经理学院",
+      "category": "neighbor",
+      "rect": {
+        "x": 32,
+        "y": 52,
+        "w": 64,
+        "h": 68
+      },
+      "open_hours": "08:00-18:00",
+      "allowed_roles": [
+        "teacher",
+        "staff"
+      ],
+      "note": "相邻建筑，位于学院楼西侧。本图仅作环境边界，不进入内部"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "rm_corridor_1f",
+      "name": "一层走廊",
+      "floor": "1F",
+      "category": "corridor",
+      "rect": {
+        "x": 106,
+        "y": 86,
+        "w": 96,
+        "h": 6
+      },
+      "parent": "b_sem"
+    },
+    {
+      "id": "rm_lobby",
+      "name": "大厅（中庭）",
+      "floor": "1F",
+      "category": "lobby",
+      "rect": {
+        "x": 148,
+        "y": 92,
+        "w": 22,
+        "h": 24
+      },
+      "parent": "b_sem",
+      "capacity": 60,
+      "open_hours": "07:00-22:30",
+      "allowed_roles": [
+        "student",
+        "teacher",
+        "staff"
+      ],
+      "note": "南门入口，通高空间，是楼内人流集散与偶遇点"
+    },
+    {
+      "id": "rm_hall",
+      "name": "多功能厅（学术报告厅）",
+      "floor": "1F",
+      "category": "hall",
+      "rect": {
+        "x": 106,
+        "y": 92,
+        "w": 40,
+        "h": 22
+      },
+      "parent": "b_sem",
+      "capacity": 350,
+      "open_hours": "按活动预约",
+      "allowed_roles": [
+        "student",
+        "teacher",
+        "staff"
+      ],
+      "note": "讲座、答辩、招聘宣讲、开学典礼"
+    },
+    {
+      "id": "rm_coffee",
+      "name": "咖啡角",
+      "floor": "1F",
+      "category": "service",
+      "rect": {
+        "x": 172,
+        "y": 92,
+        "w": 12,
+        "h": 22
+      },
+      "parent": "b_sem",
+      "capacity": 24,
+      "open_hours": "08:00-20:00",
+      "allowed_roles": [
+        "student",
+        "teacher",
+        "staff"
+      ]
+    },
+    {
+      "id": "rm_duty",
+      "name": "值班室（物业/安保）",
+      "floor": "1F",
+      "category": "service",
+      "rect": {
+        "x": 186,
+        "y": 92,
+        "w": 16,
+        "h": 22
+      },
+      "parent": "b_sem",
+      "capacity": 6,
+      "open_hours": "00:00-24:00",
+      "allowed_roles": [
+        "staff"
+      ]
+    },
+    {
+      "id": "rm_lab",
+      "name": "科研与实验中心",
+      "floor": "1F",
+      "category": "lab",
+      "rect": {
+        "x": 106,
+        "y": 58,
+        "w": 40,
+        "h": 28
+      },
+      "parent": "b_sem",
+      "capacity": 80,
+      "open_hours": "08:00-21:00",
+      "allowed_roles": [
+        "teacher",
+        "student"
+      ],
+      "note": "行为实验、眼动/脑电实验、数据分析工位"
+    },
+    {
+      "id": "rm_elev",
+      "name": "电梯厅 / 楼梯间",
+      "floor": "1F",
+      "category": "vertical",
+      "rect": {
+        "x": 148,
+        "y": 58,
+        "w": 12,
+        "h": 28
+      },
+      "parent": "b_sem",
+      "capacity": 20,
+      "open_hours": "00:00-24:00",
+      "allowed_roles": [
+        "student",
+        "teacher",
+        "staff"
+      ],
+      "note": "通往上层的垂直交通节点（2F+ 未建模）"
+    },
+    {
+      "id": "rm_t101",
+      "name": "专业学位培训教室 101",
+      "floor": "1F",
+      "category": "classroom",
+      "rect": {
+        "x": 162,
+        "y": 58,
+        "w": 18,
+        "h": 28
+      },
+      "parent": "b_sem",
+      "capacity": 60,
+      "open_hours": "08:00-21:30",
+      "allowed_roles": [
+        "student",
+        "teacher"
+      ]
+    },
+    {
+      "id": "rm_t102",
+      "name": "专业学位培训教室 102",
+      "floor": "1F",
+      "category": "classroom",
+      "rect": {
+        "x": 182,
+        "y": 58,
+        "w": 20,
+        "h": 28
+      },
+      "parent": "b_sem",
+      "capacity": 80,
+      "open_hours": "08:00-21:30",
+      "allowed_roles": [
+        "student",
+        "teacher"
+      ]
+    }
+  ],
+  "spawns": [
+    {
+      "id": "sp_south_gate",
+      "name": "学院楼南门",
+      "pos": [
+        159,
+        118
+      ],
+      "kind": "entrance"
+    },
+    {
+      "id": "sp_plaza",
+      "name": "广场中心",
+      "pos": [
+        154,
+        138
+      ],
+      "kind": "landmark"
+    },
+    {
+      "id": "sp_parking",
+      "name": "停车场",
+      "pos": [
+        234,
+        78
+      ],
+      "kind": "transport"
+    },
+    {
+      "id": "sp_dagong",
+      "name": "大工路（公交/校车方向）",
+      "pos": [
+        160,
+        19
+      ],
+      "kind": "gateway"
+    },
+    {
+      "id": "sp_jlxy",
+      "name": "高级经理学院一侧",
+      "pos": [
+        80,
+        150
+      ],
+      "kind": "gateway"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "stu_02",
+  "role": "student",
+  "name": "郭佳仑",
+  "identity": "大三 · 工商管理",
+  "traits": [
+    "外向",
+    "社团活跃",
+    "嗓门大"
+  ],
+  "speech_style": "语速快，爱用感叹句",
+  "goal": "把创业大赛的报名表收齐",
+  "look": {
+    "hair": "#1e1a16",
+    "shirt": "#b5462f",
+    "pants": "#3b4a63",
+    "skin": "#dbb488"
+  },
+  "start_spawn": "sp_plaza",
+  "speed": 1.45,
+  "routine": [
+    {
+      "at": "07:48",
+      "room": "rm_seminar",
+      "why": "小组碰头对材料"
+    },
+    {
+      "at": "08:15",
+      "room": "rm_coffee",
+      "why": "买杯咖啡接着干"
+    }
+  ]
+}

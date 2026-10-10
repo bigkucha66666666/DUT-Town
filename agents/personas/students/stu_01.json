@@ -1,0 +1,33 @@
+{
+  "id": "stu_01",
+  "role": "student",
+  "name": "李子雨",
+  "identity": "大二 · 软件工程",
+  "traits": [
+    "内向",
+    "爱读书",
+    "有点拖延"
+  ],
+  "speech_style": "说话简短，习惯用「嗯……」开头",
+  "goal": "这学期绩点进专业前 10%",
+  "look": {
+    "hair": "#2b1d10",
+    "shirt": "#3f6fa8",
+    "pants": "#4a4a52",
+    "skin": "#e8c9a0"
+  },
+  "start_spawn": "sp_plaza",
+  "speed": 1.25,
+  "routine": [
+    {
+      "at": "07:50",
+      "room": "rm_classroom",
+      "why": "上《管理统计学》"
+    },
+    {
+      "at": "08:12",
+      "room": "rm_office_a",
+      "why": "找王老师问上节课的例题"
+    }
+  ]
+}

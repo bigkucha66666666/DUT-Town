@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DUT 小镇 · 经济管理学院</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="game">
+
+  <!-- ============================ 侧栏 -->
+  <aside class="side">
+    <div class="side__scroll">
+
+      <header class="logo">
+        <div class="logo__badge">DUT</div>
+        <div class="logo__text">
+          <h1>小镇</h1>
+          <p>校园多智能体模拟</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2 class="card__t">场景</h2>
+        <div class="tabs" id="scenes"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__t">楼层 <small>仅 1F 已建模</small></h2>
+        <div class="chips" id="floors"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__t">显示</h2>
+        <div class="toggles" id="toggles"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__t">图例</h2>
+        <ul class="legend" id="legend"></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card__t">动态 <small>回放事件</small></h2>
+        <ul class="feed" id="feed"><li class="muted">暂无事件</li></ul>
+      </section>
+
+      <section class="card card--grow">
+        <h2 class="card__t">详情 <small id="detail-hint">点一下地图上的东西</small></h2>
+        <div id="detail" class="detail">
+          <p class="detail__empty">拖动看四周，滚轮放大缩小。<br>点房间、家具或出生点看属性。</p>
+        </div>
+      </section>
+
+    </div>
+    <footer class="side__foot">
+      <code id="mapfile">world/maps/sem_1f.json</code>
+      <span>示意图，房间与家具为合理推定</span>
+    </footer>
+  </aside>
+
+  <!-- ============================ 舞台 -->
+  <main class="stage">
+    <canvas id="map"></canvas>
+
+    <div class="hud">
+      <button data-act="in"   title="放大 +">＋</button>
+      <button data-act="out"  title="缩小 −">−</button>
+      <button data-act="fit"  title="适应窗口 0">⤢</button>
+      <button data-act="grid" class="on" title="网格 G">▦</button>
+      <button data-act="lbl"  class="on" title="标签 L">A</button>
+    </div>
+
+    <div class="tip" id="tip" hidden></div>
+
+    <div class="toast" id="toast" hidden></div>
+
+    <div class="playbar" id="playbar" hidden>
+      <span class="livebadge" id="livebadge" hidden>● 实时</span>
+      <button id="playbtn" title="暂停 / 继续">❚❚</button>
+      <button id="loopplay" class="on" title="循环播放">↻</button>
+      <div class="speeds" id="speeds"></div>
+      <input type="range" id="scrub" min="0" max="1" value="0" step="1" title="拖动查看任意时刻">
+      <span class="clock" id="playclock">--:--</span>
+    </div>
+
+    <div class="bar">
+      <span id="st-coord">x — / y —</span><i></i>
+      <span id="st-zoom">—</span><i></i>
+      <span id="st-layer">—</span><i></i>
+      <span id="st-walk">—</span>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/art.js"></script>
+<script src="js/live.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

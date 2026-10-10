@@ -1,0 +1,33 @@
+{
+  "id": "stu_03",
+  "role": "student",
+  "name": "房舜尧",
+  "identity": "研一 · 管理科学与工程",
+  "traits": [
+    "安静",
+    "作息规律",
+    "实验狂"
+  ],
+  "speech_style": "用词准确，喜欢先给结论",
+  "goal": "这个月把行为实验的数据跑完",
+  "look": {
+    "hair": "#4a2f18",
+    "shirt": "#5d9b3f",
+    "pants": "#2f3542",
+    "skin": "#f0d5b4"
+  },
+  "start_spawn": "sp_plaza",
+  "speed": 1.35,
+  "routine": [
+    {
+      "at": "07:52",
+      "room": "rm_classroom",
+      "why": "旁听一门课"
+    },
+    {
+      "at": "08:20",
+      "room": "rm_seminar",
+      "why": "开组会过进度"
+    }
+  ]
+}
